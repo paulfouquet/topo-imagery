@@ -70,7 +70,7 @@ jobs:
           result-encoding: string
           script: |
             const tags = [];
-            if ("${{ github.event.label.name == 'container' }}") {
+            if ('${{github.event.label.name}}' == 'container') {
               tags.push('ghcr.io/${{ github.repository }}:pr-${{github.event.number}}');
             } else{
               tags.push('ghcr.io/${{ github.repository }}:latest');
